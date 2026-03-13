@@ -1,5 +1,4 @@
 public class Patient extends Person implements Billable {
-
     private String illness;
 
     public Patient(String id, String name, int age, String illness) {
@@ -13,11 +12,11 @@ public class Patient extends Person implements Billable {
 
     @Override
     public void displayRole() {
-        System.out.println("");
+        System.out.println("Patient: " + getName() + " - " + illness);
     }
 
     @Override
     public void generateBill(double amount) {
-        System.out.println("Patient bill generated: Ksh " + amount);
+        System.out.println("Bill for " + getName() + ": Ksh " + amount);
     }
 }

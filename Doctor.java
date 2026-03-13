@@ -1,5 +1,4 @@
 public class Doctor extends HospitalMember implements Schedulable {
-
     private String specialization;
 
     public Doctor(String id, String name, int age, String department, String specialization) {
@@ -11,19 +10,18 @@ public class Doctor extends HospitalMember implements Schedulable {
         return specialization;
     }
 
-    
     @Override
     public void displayRole() {
-        System.out.println("");
+        System.out.println("Doctor: " + getName() + " - " + specialization);
     }
 
     @Override
     public void performDuties() {
-        System.out.println("Doctor Kamau treated Mr. John Mwangi.");
+        System.out.println(getName() + " is treating patients.");
     }
 
     @Override
     public void schedule(String date) {
-        System.out.println(" on: " + date);
+        System.out.println("Appointment scheduled with " + getName() + " on: " + date);
     }
 }
